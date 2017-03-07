@@ -4,8 +4,6 @@ var bodyParser = require('body-parser');
 var parseURLencoded = bodyParser.urlencoded({ extended: false });
 var mongoose = require('mongoose');
 
-var db = mongoose.connection;
-
 router.route('/')
   .get(function(request, response){
     if(request.query.limit >= 0) {

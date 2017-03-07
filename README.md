@@ -6,7 +6,7 @@
 - Open localhost:3000 in browser to view the webpage
 
 ## File Structure
-- /routes contains the routing controls for /blocks and /locations
+- /server contains the routing and mongoose schemas
 - /public contains the public files being served to the web browser
 - app.js is the node server, handling all requests
 - logger.js is middleware written to console.log the time certain requests took to complete
