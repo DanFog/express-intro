@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
-    "express": "^4.9.8"
+    "express": "^4.9.8",
+    "express-error-handler": "^1.1.0",
+    "method-override": "^2.3.7",
+    "mongoose": "^4.8.6"
   }
 }
