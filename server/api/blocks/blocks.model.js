@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 
 var BlockSchema = new mongoose.Schema({
-  type: String,
+  block: String,
   description: String
 });
 

@@ -9,10 +9,11 @@ $(function() {
         $.ajax({
             type: 'POST',
             url: '/blocks',
-            data: blockData
-        }).done(function(blockName) {
-            appendToList([blockName]);
-            form.trigger('reset');
+            data: blockData,
+            success: function(blockName) {
+                appendToList([blockName]);
+                form.trigger('reset');
+            }
         })
     });
 
