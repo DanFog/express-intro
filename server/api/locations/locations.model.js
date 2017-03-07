@@ -5,4 +5,4 @@ var LocationSchema = new mongoose.Schema({
   description: String
 });
 
-export default mongoose.model('Location', LocationSchema);
+module.exports = mongoose.model('Location', LocationSchema);

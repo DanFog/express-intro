@@ -3,13 +3,20 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var parseURLencoded = bodyParser.urlencoded({ extended: false });
 var mongoose = require('mongoose');
+var blockModel = require('./blocks.model.js');
+
+var db = mongoose.connection;
 
 router.route('/')
   .get(function(request, response){
     if(request.query.limit >= 0) {
-        response.json(Object.keys(blocks.slice(0, request.query.limit)));
+        blockModel.find(function(err, blocks) {
+          console.log(blocks);
+        });
     } else {
-        response.json(Object.keys(blocks));
+      blockModel.find(function(err, blocks) {
+        console.log(blocks);
+      });
     }
   })
   .post(parseURLencoded, function(request, response){

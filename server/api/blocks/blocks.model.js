@@ -1,3 +1,5 @@
+'use strict';
+
 var mongoose = require('mongoose');
 
 var BlockSchema = new mongoose.Schema({
@@ -5,4 +7,4 @@ var BlockSchema = new mongoose.Schema({
   description: String
 });
 
-export default mongoose.model('Block', BlockSchema);
+module.exports = mongoose.model('Block', BlockSchema);
