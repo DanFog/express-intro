@@ -3,12 +3,6 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var parseURLencoded = bodyParser.urlencoded({ extended: false });
 
-var locations = {
-    'Fixed': 'First floor',
-    'Movable': 'Second floor',
-    'Rotating': 'Penthouse'
-};
-
 router.route('/')
   .get(function(request, response){
     if(request.query.limit >= 0) {

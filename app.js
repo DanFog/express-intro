@@ -1,8 +1,11 @@
 var express = require('express');
 var app = express();
 var logger = require('./logger');
-var blocks = require('./routes/blocks');
-var locations = require('./routes/locations');
+var blocks = require('./server/api/blocks/blocks');
+var locations = require('./server/api/locations/locations');
+var mongoose = require('mongoose');
+
+mongoose.connect('localhost:27017/express-intro');
 
 app.use(logger);
 app.use(express.static('public'));

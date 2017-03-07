@@ -2,12 +2,7 @@ var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
 var parseURLencoded = bodyParser.urlencoded({ extended: false });
-
-var blocks = {
-    'Fixed': 'Fastened securely in positon',
-    'Movable': 'Capable of being moved',
-    'Rotating': 'Moving in a cicle around it\'s center'
-};
+var mongoose = require('mongoose');
 
 router.route('/')
   .get(function(request, response){
